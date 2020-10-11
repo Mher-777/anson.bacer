@@ -12,6 +12,10 @@ footer { flex: 0 0 auto; }
   &__row {
     display: flex;
     padding: 40px 0 60px;
+    transition: all linear .3s;
+    &--close {
+      transform: translateX(calc(-100% - 15px));
+    }
   }
   &__link {
     margin-top: auto;

@@ -12,11 +12,25 @@ header { flex: 0 0 auto; }
     align-items: center;
     justify-content: space-between;
   }
-
+  &__search {
+    margin-left: auto;
+    margin-right: 20px;
+    transform: translateY(calc(-100% - 30px));
+    transition: all linear .3s;
+    display: none;
+    &--open {
+      transform: translateY(0);
+    }
+  }
 }
 .logo__link {
   vertical-align: bottom;
 }
 .content {
   margin-top: 80px;
+}
+@media (max-width: 550px) {
+  .header__search {
+    display: block;
+  }
 }

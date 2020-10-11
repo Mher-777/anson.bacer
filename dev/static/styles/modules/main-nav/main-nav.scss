@@ -31,12 +31,13 @@
     border-bottom: 1px solid var(--color-green-blue);
   }
   .menu {
-    display: none;
+    display: block;
     position: absolute;
     top: calc(100% + 1px);
     background-color: var(--color-white);
     width: 100%;
-    left: 0;
+    left: 100%;
+    transition: all linear .3s;
     &__list {
       display: block;
       height: calc(100vh - 81px);
@@ -60,6 +61,9 @@
       bottom: 0;
       right: 0;
       opacity: .1;
+    }
+    &--open {
+      left: 0;
     }
   }
 }

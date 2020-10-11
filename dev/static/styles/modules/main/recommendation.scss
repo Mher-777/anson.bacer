@@ -1,11 +1,14 @@
 .recommendation {
   color: var(--color-white);
   background-color: var(--color-green);
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 360px;
+    width: 100%;
+  }
   &__bg {
-    background-repeat: no-repeat;
-    background-position: top right;
-    -webkit-background-size: contain;
-    background-size: contain;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -70,6 +73,9 @@
   .recommendation__text {
     max-width: 320px;
   }
+  .recommendation__image {
+    max-width: 270px;
+  }
 }
 @media (max-width: 972px) {
   .recommendation__inner {
@@ -78,9 +84,10 @@
     padding: 35px 0;
     width: 100%;
   }
-  .recommendation__bg {
-    background-size: 200px 200px;
-    background-position: 90% 30px;
+  .recommendation__image {
+    max-width: 200px;
+    top: 30px;
+    right: 4%;
   }
   .recommendation__info {
     margin-bottom: 25px;
@@ -112,7 +119,11 @@
 }
 @media (max-width: 650px) {
   .recommendation__info {
-    width: calc(100% - 190px);
+    width: calc(100% - 195px);
+  }
+  .recommendation__image {
+    max-width: 190px;
+    right: 0;
   }
   .recommendation__inner {
     width: 100%;
@@ -145,8 +156,8 @@
   .recommendation__text {
     margin-top: 80px;
   }
-  .recommendation__bg {
-    background-size: 180px 180px;
+  .recommendation__image {
+    max-width: 180px;
   }
 }
 @media (max-width: 390px) {
@@ -158,8 +169,8 @@
   .recommendation__info {
     width: calc(100% - 140px);
   }
-  .recommendation__bg {
-    background-size: 140px 140px;
+  .recommendation__image {
+    max-width: 140px;
   }
   .recommendation__info {
     margin-top: 20px;
