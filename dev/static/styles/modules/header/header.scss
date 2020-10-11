@@ -34,3 +34,9 @@ header { flex: 0 0 auto; }
     display: block;
   }
 }
+@media (max-width: 370px) {
+  .header__search {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
