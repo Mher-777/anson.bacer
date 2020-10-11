@@ -36,6 +36,13 @@
     max-width: 460px;
     width: 100%;
   }
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   &__item {
     width: 173px;
     height: 173px;
@@ -43,9 +50,7 @@
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
     background-color: var(--color-white);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     text-align: center;
     letter-spacing: -0.28px;
     font-weight: 500;
@@ -146,13 +151,6 @@
     &:hover {
       border: none;
     }
-  }
-  .slider__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
   }
   .slider__item--color-green {
     margin: 0 auto 10px;

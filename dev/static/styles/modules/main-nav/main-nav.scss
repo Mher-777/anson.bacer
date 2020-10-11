@@ -39,8 +39,9 @@
     left: 0;
     &__list {
       display: block;
-      min-height: calc(100vh - 81px);
-      padding: 10px 15px;
+      height: calc(100vh - 81px);
+      padding: 10px 15px 110px;
+      overflow: auto;
     }
     &__item {
       font-weight: 300;
@@ -58,7 +59,14 @@
       background-color: var(--color-green-blue);
       bottom: 0;
       right: 0;
-      opacity: .2;
+      opacity: .1;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .menu {
+    &::before {
+      bottom: 108px;
     }
   }
 }

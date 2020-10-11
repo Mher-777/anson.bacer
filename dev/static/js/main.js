@@ -12,17 +12,22 @@ $(function () {
     const menuToggle = () => {
         const menu = $('.menu')
         const button = $('.hamburger')
+        const footer = $('.footer__copyright')
         button.on('click', function () {
             $(this).toggleClass('is-active')
             menu.slideToggle(500, function () {
                 menu.toggleClass('menu--open')
+                $('body').toggleClass('hidden')
             })
+            footer.toggleClass('footer__copyright--open')
         })
         $(window).resize(function () {
             let w = $(window).width();
             if (w > 1000) {
                 menu.removeAttr('style');
                 button.removeClass('is-active')
+                $('body').removeClass('hidden')
+                footer.removeClass('footer__copyright--open')
             }
         });
     }
@@ -47,7 +52,10 @@ $(function () {
         function sliderResize() {
                 const w = $(window).width()
                 let slider = $('.slider__items')
+                let elem = $('.slider__item--color-green')
                 if(w <= 940) {
+                    elem.remove()
+                    $('.slider__inner').append(elem)
                     slider.not('.slick-initialized').slick({
                         centerMode: true,
                         centerPadding: '80px',
@@ -93,6 +101,8 @@ $(function () {
                     if(slider.hasClass('slick-initialized')) {
                        slider.slick('unslick');
                     }
+                    elem.remove()
+                    $('.slider__items>div:eq(3)').after(elem)
                 }
 
         }
