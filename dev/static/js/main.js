@@ -160,6 +160,17 @@ $(function () {
     sliderTabs()
     menuToggle()
 })
+let scrollPrev = 0;
+let header = document.querySelector('.header')
+window.addEventListener('scroll', () => {
+    let scrolled = window.scrollY;
+    if(scrolled >= 100 && scrolled > scrollPrev) {
+        header.style.top = -header.offsetHeight + 'px';
+    } else {
+        header.style.top = 0;
+    }
+    scrollPrev = scrolled;
+});
 function WepP(callback) {
     let webP = new Image();
     webP.src = 'data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMw' +
@@ -179,3 +190,4 @@ WepP(function(supported) {
     }
 
 });
+

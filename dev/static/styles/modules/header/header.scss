@@ -6,6 +6,7 @@ header { flex: 0 0 auto; }
   left: 0;
   width: 100%;
   z-index: 1000;
+  transition: all linear .3s;
   &__inner {
     min-height: 80px;
     display: flex;
