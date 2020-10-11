@@ -1,0 +1,19 @@
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src:
+      url(#{$path}.woff) format("woff"),
+      url(#{$path}.woff2) format("woff2"),
+      url(#{$path}.ttf) format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+//@include font-face('Open Sans', '../fonts/opensans/opensans/opensans', 400, 'normal');
+//@include font-face('Open Sans', '../fonts/opensans/opensanslight/opensanslight', 300, 'normal');
+//@include font-face('Open Sans', '../fonts/opensans/opensanssemibold/opensanssemibold', 600, 'normal');
+@include font-face('Montserrat', '../fonts/montserrat/montserrat/Montserrat-Regular', 400, 'normal');
+@include font-face('Montserrat', '../fonts/montserrat/montserratlight/Montserrat-Light', 300, 'normal');
+@include font-face('Montserrat', '../fonts/montserrat/montserratmedium/Montserrat-Medium', 500, 'normal');
+@include font-face('Montserrat', '../fonts/montserrat/montserratbold/Montserrat-Bold', 700, 'normal');
+@include font-face('Montserrat', '../fonts/montserrat/montserratblack/Montserrat-Black', 900, 'normal');

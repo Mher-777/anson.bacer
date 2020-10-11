@@ -1,0 +1,22 @@
+header { flex: 0 0 auto; }
+.header {
+  background-color: var(--color-white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  &__inner {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+}
+.logo__link {
+  vertical-align: bottom;
+}
+.content {
+  margin-top: 80px;
+}
